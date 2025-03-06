@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Screen Content -->
+    <div class="screen-container overflow-y-auto">
+      <!-- Header -->
+      <div class="px-5 pt-4 pb-2">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold">我的衣橱</h1>
+          <div class="flex space-x-3">
+            <div
+              class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center"
+            >
+              <i class="fas fa-search text-gray-500"></i>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-plus text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="px-5 mb-4">
+        <div class="flex space-x-3 overflow-x-auto pb-2">
+          <div class="category-pill active whitespace-nowrap">全部</div>
+          <div class="category-pill inactive whitespace-nowrap">上衣</div>
+          <div class="category-pill inactive whitespace-nowrap">裤装</div>
+          <div class="category-pill inactive whitespace-nowrap">裙装</div>
+          <div class="category-pill inactive whitespace-nowrap">外套</div>
+          <div class="category-pill inactive whitespace-nowrap">鞋履</div>
+          <div class="category-pill inactive whitespace-nowrap">配饰</div>
+        </div>
+      </div>
+
+      <!-- Filter Options -->
+      <div class="px-5 mb-4">
+        <div class="flex space-x-3 overflow-x-auto pb-2">
+          <div
+            class="px-3 py-1 bg-gray-200 rounded-full text-xs flex items-center"
+          >
+            <span>季节</span>
+            <i class="fas fa-chevron-down ml-1 text-gray-500"></i>
+          </div>
+          <div
+            class="px-3 py-1 bg-gray-200 rounded-full text-xs flex items-center"
+          >
+            <span>颜色</span>
+            <i class="fas fa-chevron-down ml-1 text-gray-500"></i>
+          </div>
+          <div
+            class="px-3 py-1 bg-gray-200 rounded-full text-xs flex items-center"
+          >
+            <span>品牌</span>
+            <i class="fas fa-chevron-down ml-1 text-gray-500"></i>
+          </div>
+          <div
+            class="px-3 py-1 bg-gray-200 rounded-full text-xs flex items-center"
+          >
+            <span>风格</span>
+            <i class="fas fa-chevron-down ml-1 text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clothing Items Grid -->
+      <div class="px-5 mb-10">
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Item 1 -->
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="fas fa-ellipsis-h text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">白色衬衫</h3>
+                  <p class="text-xs text-gray-500">UNIQLO</p>
+                </div>
+                <div class="flex space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                </div>
+              </div>
+              <div class="flex mt-2">
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs mr-1"
+                  >上衣</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                  >四季</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="fas fa-ellipsis-h text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">黑色西装裤</h3>
+                  <p class="text-xs text-gray-500">ZARA</p>
+                </div>
+                <div class="flex space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-gray-900"></div>
+                </div>
+              </div>
+              <div class="flex mt-2">
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs mr-1"
+                  >裤装</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                  >春秋</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="fas fa-ellipsis-h text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">牛仔外套</h3>
+                  <p class="text-xs text-gray-500">Levi's</p>
+                </div>
+                <div class="flex space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-blue-700"></div>
+                </div>
+              </div>
+              <div class="flex mt-2">
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs mr-1"
+                  >外套</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                  >春秋</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="fas fa-ellipsis-h text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">白色运动鞋</h3>
+                  <p class="text-xs text-gray-500">Nike</p>
+                </div>
+                <div class="flex space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-white border"></div>
+                </div>
+              </div>
+              <div class="flex mt-2">
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs mr-1"
+                  >鞋履</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                  >四季</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="fas fa-ellipsis-h text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">格纹衬衫</h3>
+                  <p class="text-xs text-gray-500">H&M</p>
+                </div>
+                <div class="flex space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                </div>
+              </div>
+              <div class="flex mt-2">
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs mr-1"
+                  >上衣</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                  >秋冬</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="fas fa-ellipsis-h text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">黑色连衣裙</h3>
+                  <p class="text-xs text-gray-500">COS</p>
+                </div>
+                <div class="flex space-x-1">
+                  <div class="w-3 h-3 rounded-full bg-gray-900"></div>
+                </div>
+              </div>
+              <div class="flex mt-2">
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs mr-1"
+                  >裙装</span
+                >
+                <span
+                  class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                  >春夏</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <i class="fas fa-home text-lg mb-1"></i>
+        <span>首页</span>
+      </div>
+      <div class="tab-item active">
+        <i class="fas fa-tshirt text-lg mb-1"></i>
+        <span>衣橱</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-magic text-lg mb-1"></i>
+        <span>试穿</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-shopping-bag text-lg mb-1"></i>
+        <span>购物</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-user text-lg mb-1"></i>
+        <span>我的</span>
+      </div>
+    </div>
+  </body>
+</html>

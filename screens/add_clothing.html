@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Screen Content -->
+    <div class="screen-container overflow-y-auto">
+      <!-- Header -->
+      <div class="px-5 pt-4 pb-2">
+        <div class="flex justify-between items-center">
+          <button class="text-blue-500">取消</button>
+          <h1 class="text-lg font-bold">添加衣物</h1>
+          <button class="text-blue-500 font-medium">保存</button>
+        </div>
+      </div>
+
+      <!-- Image Upload Section -->
+      <div class="px-5 mb-6">
+        <div class="bg-white rounded-xl p-4 flex flex-col items-center">
+          <div
+            class="w-full h-64 bg-gray-100 rounded-lg flex flex-col items-center justify-center mb-4 border-2 border-dashed border-gray-300"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-2"
+            >
+              <i class="fas fa-camera text-blue-500 text-2xl"></i>
+            </div>
+            <p class="text-gray-500 text-sm">点击添加照片</p>
+            <p class="text-gray-400 text-xs mt-1">或从相册中选择</p>
+          </div>
+
+          <div class="flex space-x-4">
+            <button
+              class="flex-1 py-2 bg-blue-100 rounded-lg text-blue-500 text-sm flex items-center justify-center"
+            >
+              <i class="fas fa-camera mr-2"></i>
+              拍照
+            </button>
+            <button
+              class="flex-1 py-2 bg-blue-100 rounded-lg text-blue-500 text-sm flex items-center justify-center"
+            >
+              <i class="fas fa-image mr-2"></i>
+              相册
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Recognition Result -->
+      <div class="px-5 mb-6">
+        <div class="bg-white rounded-xl p-4">
+          <h2 class="text-base font-medium mb-3">AI识别结果</h2>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >上衣</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >衬衫</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >白色</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >棉质</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >商务风格</span
+            >
+          </div>
+          <p class="text-xs text-gray-500">
+            AI已自动识别您的衣物，您可以手动修改
+          </p>
+        </div>
+      </div>
+
+      <!-- Basic Information Form -->
+      <div class="px-5 mb-6">
+        <div class="bg-white rounded-xl p-4">
+          <h2 class="text-base font-medium mb-3">基本信息</h2>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">名称</label>
+            <input
+              type="text"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+              placeholder="例如：白色衬衫"
+              value="白色商务衬衫"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">类别</label>
+            <div class="relative">
+              <select
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm appearance-none"
+              >
+                <option>上衣</option>
+                <option>裤装</option>
+                <option>裙装</option>
+                <option>外套</option>
+                <option>鞋履</option>
+                <option>配饰</option>
+              </select>
+              <div
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
+              >
+                <i class="fas fa-chevron-down text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">子类别</label>
+            <div class="relative">
+              <select
+                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm appearance-none"
+              >
+                <option>衬衫</option>
+                <option>T恤</option>
+                <option>卫衣</option>
+                <option>针织衫</option>
+                <option>背心</option>
+              </select>
+              <div
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
+              >
+                <i class="fas fa-chevron-down text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">颜色</label>
+            <div class="flex flex-wrap gap-3">
+              <div
+                class="w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center"
+              >
+                <div class="w-6 h-6 rounded-full bg-white"></div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-black"></div>
+              <div class="w-8 h-8 rounded-full bg-gray-500"></div>
+              <div class="w-8 h-8 rounded-full bg-red-500"></div>
+              <div class="w-8 h-8 rounded-full bg-blue-500"></div>
+              <div class="w-8 h-8 rounded-full bg-green-500"></div>
+              <div class="w-8 h-8 rounded-full bg-yellow-500"></div>
+              <div class="w-8 h-8 rounded-full bg-purple-500"></div>
+              <div class="w-8 h-8 rounded-full bg-pink-500"></div>
+              <div
+                class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"
+              >
+                <i class="fas fa-plus text-gray-500 text-xs"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">品牌</label>
+            <input
+              type="text"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+              placeholder="例如：UNIQLO"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">适用季节</label>
+            <div class="flex space-x-2">
+              <div
+                class="flex-1 py-2 bg-blue-500 rounded-lg text-white text-sm text-center"
+              >
+                春
+              </div>
+              <div
+                class="flex-1 py-2 bg-blue-500 rounded-lg text-white text-sm text-center"
+              >
+                夏
+              </div>
+              <div
+                class="flex-1 py-2 bg-blue-500 rounded-lg text-white text-sm text-center"
+              >
+                秋
+              </div>
+              <div
+                class="flex-1 py-2 bg-gray-200 rounded-lg text-gray-500 text-sm text-center"
+              >
+                冬
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm text-gray-600 mb-1">风格标签</label>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm"
+                >商务</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-sm"
+                >休闲</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-sm"
+                >正式</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-sm"
+                >简约</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-sm"
+                >潮流</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-sm"
+                >复古</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-200 text-gray-600 rounded-full text-sm flex items-center"
+              >
+                <i class="fas fa-plus text-xs mr-1"></i>
+                添加
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">备注</label>
+            <textarea
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+              rows="3"
+              placeholder="添加备注信息..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

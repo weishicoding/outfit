@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Screen Content -->
+    <div class="screen-container overflow-y-auto">
+      <!-- Header Image -->
+      <div class="relative">
+        <img
+          src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          alt="Outfit"
+          class="w-full h-80 object-cover"
+        />
+        <div
+          class="absolute top-0 left-0 right-0 p-4 flex justify-between items-center"
+        >
+          <button
+            class="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center"
+          >
+            <i class="fas fa-arrow-left text-white"></i>
+          </button>
+          <div class="flex space-x-3">
+            <button
+              class="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center"
+            >
+              <i class="fas fa-heart text-white"></i>
+            </button>
+            <button
+              class="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center"
+            >
+              <i class="fas fa-share-alt text-white"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+        >
+          <div class="text-white">
+            <h1 class="text-2xl font-bold">简约通勤风</h1>
+            <p class="opacity-90">适合今日天气和场合</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outfit Details -->
+      <div class="px-5 py-6">
+        <div class="flex justify-between items-center mb-6">
+          <div class="flex items-center">
+            <div
+              class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-3"
+            >
+              <i class="fas fa-cloud-sun text-blue-500"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">今日天气</p>
+              <p class="font-medium">晴朗 23°C</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-3"
+            >
+              <i class="fas fa-briefcase text-purple-500"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">场合</p>
+              <p class="font-medium">通勤</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h2 class="text-lg font-semibold mb-3">穿搭风格</h2>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >简约</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >通勤</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >舒适</span
+            >
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+              >商务休闲</span
+            >
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h2 class="text-lg font-semibold mb-3">穿搭单品</h2>
+
+          <div class="bg-white rounded-xl overflow-hidden mb-4">
+            <div class="flex">
+              <div class="w-24 h-24">
+                <img
+                  src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Clothing item"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 p-3 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-medium">白色衬衫</h3>
+                  <p class="text-xs text-gray-500">UNIQLO</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex space-x-1">
+                    <span
+                      class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                      >上衣</span
+                    >
+                  </div>
+                  <button class="text-blue-500 text-sm">查看</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden mb-4">
+            <div class="flex">
+              <div class="w-24 h-24">
+                <img
+                  src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Clothing item"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 p-3 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-medium">黑色西装裤</h3>
+                  <p class="text-xs text-gray-500">ZARA</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex space-x-1">
+                    <span
+                      class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                      >裤装</span
+                    >
+                  </div>
+                  <button class="text-blue-500 text-sm">查看</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl overflow-hidden">
+            <div class="flex">
+              <div class="w-24 h-24">
+                <img
+                  src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  alt="Clothing item"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 p-3 flex flex-col justify-between">
+                <div>
+                  <h3 class="font-medium">白色运动鞋</h3>
+                  <p class="text-xs text-gray-500">Nike</p>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex space-x-1">
+                    <span
+                      class="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+                      >鞋履</span
+                    >
+                  </div>
+                  <button class="text-blue-500 text-sm">查看</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h2 class="text-lg font-semibold mb-3">穿搭建议</h2>
+          <div class="bg-white rounded-xl p-4">
+            <p class="text-gray-700 text-sm leading-relaxed">
+              这套简约通勤风格的穿搭非常适合办公室环境，白色衬衫搭配黑色西装裤展现出专业感，同时白色运动鞋增添了一丝休闲元素，平衡了整体风格。建议可以搭配简约的手表或项链作为点缀，提升整体质感。
+            </p>
+          </div>
+        </div>
+
+        <div class="flex space-x-4 mb-10">
+          <button
+            class="secondary-button flex-1 flex justify-center items-center"
+          >
+            <i class="fas fa-sync-alt mr-2"></i> 换一套
+          </button>
+          <button
+            class="primary-button flex-1 flex justify-center items-center"
+          >
+            <i class="fas fa-eye mr-2"></i> 虚拟试穿
+          </button>
+        </div>
+
+        <div class="mb-6">
+          <h2 class="text-lg font-semibold mb-3">相似穿搭</h2>
+          <div class="flex space-x-4 overflow-x-auto pb-4">
+            <div class="flex-shrink-0 w-40">
+              <div class="clothing-item bg-white mb-2">
+                <img
+                  src="https://images.unsplash.com/photo-1550246140-5119ae4790b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Similar outfit"
+                  class="w-full h-48 object-cover"
+                />
+              </div>
+              <p class="text-sm font-medium">商务简约风</p>
+            </div>
+            <div class="flex-shrink-0 w-40">
+              <div class="clothing-item bg-white mb-2">
+                <img
+                  src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Similar outfit"
+                  class="w-full h-48 object-cover"
+                />
+              </div>
+              <p class="text-sm font-medium">休闲通勤风</p>
+            </div>
+            <div class="flex-shrink-0 w-40">
+              <div class="clothing-item bg-white mb-2">
+                <img
+                  src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Similar outfit"
+                  class="w-full h-48 object-cover"
+                />
+              </div>
+              <p class="text-sm font-medium">精英商务风</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item active">
+        <i class="fas fa-home text-lg mb-1"></i>
+        <span>首页</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-tshirt text-lg mb-1"></i>
+        <span>衣橱</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-magic text-lg mb-1"></i>
+        <span>试穿</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-shopping-bag text-lg mb-1"></i>
+        <span>购物</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-user text-lg mb-1"></i>
+        <span>我的</span>
+      </div>
+    </div>
+  </body>
+</html>

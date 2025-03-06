@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-white h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Onboarding Screen Content -->
+    <div class="screen-container">
+      <div class="onboarding-screen">
+        <div class="flex justify-end p-4">
+          <button class="text-blue-500 font-medium">跳过</button>
+        </div>
+
+        <div class="flex-1 flex flex-col items-center justify-center">
+          <div
+            class="w-64 h-64 bg-purple-100 rounded-full flex items-center justify-center mb-10"
+          >
+            <i class="fas fa-magic text-8xl text-purple-500"></i>
+          </div>
+
+          <h2 class="text-2xl font-bold text-center mb-4">智能穿搭推荐</h2>
+          <p class="text-gray-600 text-center px-8">
+            基于天气、场景和个人风格，AI为您推荐最适合的穿搭方案
+          </p>
+        </div>
+
+        <div class="pb-8">
+          <div class="flex justify-center mb-8">
+            <div class="w-2 h-2 rounded-full bg-gray-300 mx-1"></div>
+            <div class="w-2 h-2 rounded-full bg-purple-500 mx-1"></div>
+            <div class="w-2 h-2 rounded-full bg-gray-300 mx-1"></div>
+          </div>
+
+          <button
+            class="primary-button w-full"
+            style="background-color: #9333ea"
+          >
+            下一步
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

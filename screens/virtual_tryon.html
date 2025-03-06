@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Screen Content -->
+    <div class="screen-container overflow-y-auto">
+      <!-- Header -->
+      <div class="px-5 pt-4 pb-2">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold">虚拟试穿</h1>
+          <div
+            class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-cog text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Virtual Try-on Display -->
+      <div class="px-5 mb-6">
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Virtual Try-on"
+            class="w-full h-96 object-cover rounded-xl"
+          />
+          <div class="absolute top-4 right-4 flex space-x-2">
+            <button
+              class="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center"
+            >
+              <i class="fas fa-camera text-white"></i>
+            </button>
+            <button
+              class="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center"
+            >
+              <i class="fas fa-share-alt text-white"></i>
+            </button>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex justify-between">
+            <button
+              class="px-4 py-2 bg-black/30 rounded-full text-white text-sm flex items-center"
+            >
+              <i class="fas fa-sync-alt mr-2"></i>
+              换一套
+            </button>
+            <button
+              class="px-4 py-2 bg-blue-500 rounded-full text-white text-sm flex items-center"
+            >
+              <i class="fas fa-thumbs-up mr-2"></i>
+              保存
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model Selection -->
+      <div class="px-5 mb-6">
+        <h2 class="text-lg font-semibold mb-3">选择模特</h2>
+        <div class="flex space-x-4 overflow-x-auto pb-2">
+          <div class="flex-shrink-0 w-16 flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full border-2 border-blue-500 overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                alt="Model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-xs mt-1 text-center">我自己</p>
+          </div>
+          <div class="flex-shrink-0 w-16 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                alt="Model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-xs mt-1 text-center">模特A</p>
+          </div>
+          <div class="flex-shrink-0 w-16 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                alt="Model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-xs mt-1 text-center">模特B</p>
+          </div>
+          <div class="flex-shrink-0 w-16 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                alt="Model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-xs mt-1 text-center">模特C</p>
+          </div>
+          <div class="flex-shrink-0 w-16 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                alt="Model"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-xs mt-1 text-center">模特D</p>
+          </div>
+          <div class="flex-shrink-0 w-16 flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center"
+            >
+              <i class="fas fa-plus text-gray-500"></i>
+            </div>
+            <p class="text-xs mt-1 text-center">添加</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style Options -->
+      <div class="px-5 mb-6">
+        <h2 class="text-lg font-semibold mb-3">风格选择</h2>
+        <div class="flex space-x-3 overflow-x-auto pb-2">
+          <div class="category-pill active whitespace-nowrap">简约通勤</div>
+          <div class="category-pill inactive whitespace-nowrap">商务正式</div>
+          <div class="category-pill inactive whitespace-nowrap">休闲舒适</div>
+          <div class="category-pill inactive whitespace-nowrap">约会浪漫</div>
+          <div class="category-pill inactive whitespace-nowrap">运动活力</div>
+        </div>
+      </div>
+
+      <!-- Outfit Components -->
+      <div class="px-5 mb-10">
+        <h2 class="text-lg font-semibold mb-3">穿搭组件</h2>
+        <div class="bg-white rounded-xl p-4">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-medium">上衣</h3>
+            <button class="text-blue-500 text-sm">更换</button>
+          </div>
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-lg overflow-hidden mr-3">
+              <img
+                src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p class="font-medium text-sm">白色衬衫</p>
+              <p class="text-xs text-gray-500">UNIQLO</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-medium">裤装</h3>
+            <button class="text-blue-500 text-sm">更换</button>
+          </div>
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-lg overflow-hidden mr-3">
+              <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p class="font-medium text-sm">黑色西装裤</p>
+              <p class="text-xs text-gray-500">ZARA</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-medium">鞋履</h3>
+            <button class="text-blue-500 text-sm">更换</button>
+          </div>
+          <div class="flex items-center">
+            <div class="w-16 h-16 rounded-lg overflow-hidden mr-3">
+              <img
+                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Clothing item"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <p class="font-medium text-sm">白色运动鞋</p>
+              <p class="text-xs text-gray-500">Nike</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <i class="fas fa-home text-lg mb-1"></i>
+        <span>首页</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-tshirt text-lg mb-1"></i>
+        <span>衣橱</span>
+      </div>
+      <div class="tab-item active">
+        <i class="fas fa-magic text-lg mb-1"></i>
+        <span>试穿</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-shopping-bag text-lg mb-1"></i>
+        <span>购物</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-user text-lg mb-1"></i>
+        <span>我的</span>
+      </div>
+    </div>
+  </body>
+</html>

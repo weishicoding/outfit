@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Screen Content -->
+    <div class="screen-container overflow-y-auto">
+      <!-- Header -->
+      <div class="px-5 pt-4 pb-2">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold">购物推荐</h1>
+          <div
+            class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-search text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget Slider -->
+      <div class="px-5 mb-6">
+        <div class="bg-white rounded-xl p-4">
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-base font-medium">预算设置</h2>
+            <span class="text-blue-500 font-medium">¥1200</span>
+          </div>
+          <input
+            type="range"
+            min="100"
+            max="5000"
+            value="1200"
+            class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500"
+          />
+          <div class="flex justify-between text-xs text-gray-500 mt-1">
+            <span>¥100</span>
+            <span>¥5000+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Missing Items Recommendations -->
+      <div class="px-5 mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="text-lg font-semibold">衣橱缺失单品</h2>
+          <button class="text-blue-500 text-sm">查看全部</button>
+        </div>
+
+        <div class="bg-white rounded-xl p-4 mb-4">
+          <div class="flex items-start">
+            <div
+              class="w-20 h-20 rounded-lg overflow-hidden mr-3 flex-shrink-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Product"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium">米色风衣</h3>
+                  <p class="text-xs text-gray-500 mb-1">Burberry</p>
+                  <div class="flex space-x-1 mb-2">
+                    <span
+                      class="px-2 py-0.5 bg-yellow-100 text-yellow-600 rounded text-xs"
+                      >秋季必备</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-blue-100 text-blue-600 rounded text-xs"
+                      >百搭</span
+                    >
+                  </div>
+                </div>
+                <p class="text-red-500 font-medium">¥899</p>
+              </div>
+              <p class="text-xs text-gray-600 mb-3">
+                AI分析：您的衣橱缺少一件基础款风衣，可与您现有的多套穿搭完美搭配
+              </p>
+              <div class="flex justify-between">
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-full text-xs text-gray-600"
+                >
+                  稍后再看
+                </button>
+                <button
+                  class="px-3 py-1 bg-blue-500 rounded-full text-xs text-white"
+                >
+                  查看详情
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-4">
+          <div class="flex items-start">
+            <div
+              class="w-20 h-20 rounded-lg overflow-hidden mr-3 flex-shrink-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Product"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium">牛仔夹克</h3>
+                  <p class="text-xs text-gray-500 mb-1">Levi's</p>
+                  <div class="flex space-x-1 mb-2">
+                    <span
+                      class="px-2 py-0.5 bg-green-100 text-green-600 rounded text-xs"
+                      >休闲风格</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-blue-100 text-blue-600 rounded text-xs"
+                      >耐穿</span
+                    >
+                  </div>
+                </div>
+                <p class="text-red-500 font-medium">¥499</p>
+              </div>
+              <p class="text-xs text-gray-600 mb-3">
+                AI分析：牛仔夹克是休闲风格的必备单品，可与您的多条裤装和裙装搭配
+              </p>
+              <div class="flex justify-between">
+                <button
+                  class="px-3 py-1 border border-gray-300 rounded-full text-xs text-gray-600"
+                >
+                  稍后再看
+                </button>
+                <button
+                  class="px-3 py-1 bg-blue-500 rounded-full text-xs text-white"
+                >
+                  查看详情
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfect Match Recommendations -->
+      <div class="px-5 mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="text-lg font-semibold">与您衣橱完美搭配</h2>
+          <button class="text-blue-500 text-sm">查看全部</button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Product"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="far fa-heart text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">灰色针织衫</h3>
+                  <p class="text-xs text-gray-500">UNIQLO</p>
+                </div>
+                <p class="text-red-500 text-sm font-medium">¥299</p>
+              </div>
+              <p class="text-xs text-gray-600 mt-1 mb-2">可与您的3套穿搭搭配</p>
+              <button
+                class="w-full py-1.5 bg-blue-500 rounded-full text-xs text-white"
+              >
+                加入购物车
+              </button>
+            </div>
+          </div>
+
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Product"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="far fa-heart text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">黑色皮鞋</h3>
+                  <p class="text-xs text-gray-500">Clarks</p>
+                </div>
+                <p class="text-red-500 text-sm font-medium">¥699</p>
+              </div>
+              <p class="text-xs text-gray-600 mt-1 mb-2">可与您的5套穿搭搭配</p>
+              <button
+                class="w-full py-1.5 bg-blue-500 rounded-full text-xs text-white"
+              >
+                加入购物车
+              </button>
+            </div>
+          </div>
+
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Product"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="far fa-heart text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">蓝色牛仔裤</h3>
+                  <p class="text-xs text-gray-500">H&M</p>
+                </div>
+                <p class="text-red-500 text-sm font-medium">¥399</p>
+              </div>
+              <p class="text-xs text-gray-600 mt-1 mb-2">可与您的4套穿搭搭配</p>
+              <button
+                class="w-full py-1.5 bg-blue-500 rounded-full text-xs text-white"
+              >
+                加入购物车
+              </button>
+            </div>
+          </div>
+
+          <div class="clothing-item bg-white">
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                alt="Product"
+                class="w-full h-40 object-cover"
+              />
+              <div
+                class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center"
+              >
+                <i class="far fa-heart text-gray-600"></i>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-medium text-sm">白色T恤</h3>
+                  <p class="text-xs text-gray-500">COS</p>
+                </div>
+                <p class="text-red-500 text-sm font-medium">¥199</p>
+              </div>
+              <p class="text-xs text-gray-600 mt-1 mb-2">可与您的6套穿搭搭配</p>
+              <button
+                class="w-full py-1.5 bg-blue-500 rounded-full text-xs text-white"
+              >
+                加入购物车
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shopping Cart Summary -->
+      <div class="px-5 mb-10">
+        <div class="bg-white rounded-xl p-4">
+          <div class="flex justify-between items-center mb-3">
+            <h2 class="text-base font-medium">购物车</h2>
+            <span class="text-blue-500 text-sm">3件商品</span>
+          </div>
+          <div class="flex justify-between items-center mb-3">
+            <p class="text-gray-600 text-sm">商品总价</p>
+            <p class="font-medium">¥1297</p>
+          </div>
+          <div class="flex justify-between items-center mb-3">
+            <p class="text-gray-600 text-sm">优惠</p>
+            <p class="text-red-500">-¥100</p>
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <p class="text-gray-600 text-sm">运费</p>
+            <p>¥0</p>
+          </div>
+          <div class="h-px bg-gray-200 mb-4"></div>
+          <div class="flex justify-between items-center mb-4">
+            <p class="font-medium">实付款</p>
+            <p class="text-xl font-bold text-red-500">¥1197</p>
+          </div>
+          <button
+            class="w-full py-3 bg-blue-500 rounded-lg text-white font-medium"
+          >
+            结算
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <i class="fas fa-home text-lg mb-1"></i>
+        <span>首页</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-tshirt text-lg mb-1"></i>
+        <span>衣橱</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-magic text-lg mb-1"></i>
+        <span>试穿</span>
+      </div>
+      <div class="tab-item active">
+        <i class="fas fa-shopping-bag text-lg mb-1"></i>
+        <span>购物</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-user text-lg mb-1"></i>
+        <span>我的</span>
+      </div>
+    </div>
+  </body>
+</html>

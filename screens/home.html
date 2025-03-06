@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能穿搭助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 h-full">
+    <!-- iPhone Notch -->
+    <div class="notch"></div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <i class="fas fa-signal"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Screen Content -->
+    <div class="screen-container overflow-y-auto">
+      <!-- Header -->
+      <div class="px-5 pt-4 pb-2">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold">今日穿搭</h1>
+          <div
+            class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-bell text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather Widget -->
+      <div class="px-5 mb-6">
+        <div class="weather-widget p-4 flex justify-between items-center">
+          <div>
+            <p class="text-sm opacity-90">北京，周三</p>
+            <div class="flex items-center">
+              <span class="text-3xl font-bold">23°</span>
+              <span class="ml-1 text-sm">晴朗</span>
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-sun text-4xl"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Occasion Selection -->
+      <div class="px-5 mb-4">
+        <p class="text-gray-500 mb-2">今日场合</p>
+        <div class="flex space-x-3 overflow-x-auto pb-2">
+          <div class="category-pill active whitespace-nowrap">通勤</div>
+          <div class="category-pill inactive whitespace-nowrap">休闲</div>
+          <div class="category-pill inactive whitespace-nowrap">约会</div>
+          <div class="category-pill inactive whitespace-nowrap">商务</div>
+          <div class="category-pill inactive whitespace-nowrap">运动</div>
+        </div>
+      </div>
+
+      <!-- Today's Recommendation -->
+      <div class="px-5 mb-6">
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="text-lg font-semibold">推荐穿搭</h2>
+          <button class="text-blue-500 text-sm">查看更多</button>
+        </div>
+
+        <div class="outfit-card bg-white">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Outfit"
+              class="w-full h-64 object-cover"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4"
+            >
+              <div class="text-white">
+                <h3 class="font-medium">简约通勤风</h3>
+                <p class="text-sm opacity-90">适合今日天气和场合</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between mb-4">
+              <div class="flex space-x-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 text-blue-600 rounded-md text-xs"
+                  >舒适</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-100 text-purple-600 rounded-md text-xs"
+                  >简约</span
+                >
+                <span
+                  class="px-2 py-1 bg-yellow-100 text-yellow-600 rounded-md text-xs"
+                  >通勤</span
+                >
+              </div>
+              <button class="text-gray-400">
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+            <div class="flex justify-between">
+              <button
+                class="secondary-button flex-1 mr-2 flex justify-center items-center"
+              >
+                <i class="fas fa-sync-alt mr-2"></i> 换一套
+              </button>
+              <button
+                class="primary-button flex-1 ml-2 flex justify-center items-center"
+              >
+                <i class="fas fa-eye mr-2"></i> 试穿
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Style Categories -->
+      <div class="px-5 mb-6">
+        <h2 class="text-lg font-semibold mb-3">风格分类</h2>
+        <div class="grid grid-cols-4 gap-3">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-1"
+            >
+              <i class="fas fa-fire text-red-500"></i>
+            </div>
+            <span class="text-xs text-gray-600">潮流</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-1"
+            >
+              <i class="fas fa-briefcase text-blue-500"></i>
+            </div>
+            <span class="text-xs text-gray-600">商务</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-1"
+            >
+              <i class="fas fa-leaf text-green-500"></i>
+            </div>
+            <span class="text-xs text-gray-600">休闲</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-1"
+            >
+              <i class="fas fa-heart text-purple-500"></i>
+            </div>
+            <span class="text-xs text-gray-600">约会</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Outfits -->
+      <div class="px-5 mb-10">
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="text-lg font-semibold">最近穿搭</h2>
+          <button class="text-blue-500 text-sm">查看全部</button>
+        </div>
+
+        <div class="flex space-x-4 overflow-x-auto pb-4">
+          <div class="flex-shrink-0 w-32">
+            <div class="clothing-item bg-white mb-2">
+              <img
+                src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Recent outfit"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <p class="text-xs text-gray-600">周一</p>
+            <p class="text-sm font-medium">商务风格</p>
+          </div>
+          <div class="flex-shrink-0 w-32">
+            <div class="clothing-item bg-white mb-2">
+              <img
+                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Recent outfit"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <p class="text-xs text-gray-600">周日</p>
+            <p class="text-sm font-medium">休闲风格</p>
+          </div>
+          <div class="flex-shrink-0 w-32">
+            <div class="clothing-item bg-white mb-2">
+              <img
+                src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Recent outfit"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <p class="text-xs text-gray-600">周六</p>
+            <p class="text-sm font-medium">约会风格</p>
+          </div>
+          <div class="flex-shrink-0 w-32">
+            <div class="clothing-item bg-white mb-2">
+              <img
+                src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Recent outfit"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+            <p class="text-xs text-gray-600">周五</p>
+            <p class="text-sm font-medium">通勤风格</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item active">
+        <i class="fas fa-home text-lg mb-1"></i>
+        <span>首页</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-tshirt text-lg mb-1"></i>
+        <span>衣橱</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-magic text-lg mb-1"></i>
+        <span>试穿</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-shopping-bag text-lg mb-1"></i>
+        <span>购物</span>
+      </div>
+      <div class="tab-item">
+        <i class="fas fa-user text-lg mb-1"></i>
+        <span>我的</span>
+      </div>
+    </div>
+  </body>
+</html>
